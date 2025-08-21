@@ -10,6 +10,8 @@ print("List: ", list)
 rev_list = list[::-1]
 print("reversed list: ", rev_list)
 
+print("--- Next Run ---")
+
 #   Turn every item of a list into its square 
 new_list=[]
 for i in list:
@@ -19,6 +21,8 @@ for i in list:
         new_list.append(i)
 print("list after square of items: ", new_list)
 
+print("--- Next Run ---")
+
 #    Remove empty strings from the list of strings 
 list_st = ["Canada", "Japan"," ", "America", "Korea", "Thailand", " "]
 print("String list:", list_st)
@@ -27,9 +31,13 @@ for item in list_st:
         list_st.remove(item)
 print("String list after removing empty strings:", list_st)
 
+print("--- Next Run ---")
+
 #    Add new item to list after a specified item 
 list_st.insert(4,"UAE")
 print("String list after Adding new item after America:", list_st)
+
+print("--- Next Run ---")
 
 #    Replace list’s item with new value if found 
 for item in list_st:
