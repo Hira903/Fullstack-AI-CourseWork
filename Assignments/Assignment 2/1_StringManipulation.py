@@ -9,6 +9,8 @@ last_Char = str(input("Enter last character of string:   "))
 new_string = first_Char + "  " + middle_Char + "  " + last_Char
 print("String =", new_string)
 
+print("--- Next Run ---")
+
 #   Program to count occurrences of all characters within a string given
 
 count = { } # empty dictionery to store values
@@ -20,13 +22,19 @@ for char in new_string:   #  loop for counting occurances in string
         count[char] = 1   #   Count will start from 1 if first time character occured
 print(count)
 
+print("--- Next Run ---")
+
 #   Reverse a given string
 reverse_st = new_string[::-1]
 print("String Reversed:  ", reverse_st)
 
+print("--- Next Run ---")
+
 #    Split a string on hyphens 
 Split_st = new_string.split("-")
 print("String splited on hyphens:  ", Split_st)
+
+print("--- Next Run ---")
 
 #    Remove special symbols / punctuation from a string
 import string
