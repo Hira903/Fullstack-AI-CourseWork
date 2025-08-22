@@ -1,12 +1,17 @@
 #   String Manipulation
 
 #   Program to create a new string made of an input string’s first, middle, and last character 
+String = input("Enter a string: ")
 
-first_Char = str(input("Enter first character of string: "))
-middle_Char = str(input("Enter middle character of string:  "))
-last_Char = str(input("Enter last character of string:   "))
+first_Char = String[0]
+if len(String) % 2 == 0:
+    middle_Char = String[(len(String) // 2) -1: (len(String) // 2) + 1]
+else:
+    middle_Char = String[(len(String) // 2)]
 
-new_string = first_Char + "  " + middle_Char + "  " + last_Char
+last_Char = String[-1]
+
+new_string = first_Char + middle_Char + last_Char
 print("String =", new_string)
 
 print("--- Next Run ---")
