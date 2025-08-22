@@ -18,25 +18,24 @@ print("--- Next Run ---")
 
 #   Program to count occurrences of all characters within a string given
 
-count = { } # empty dictionery to store values
+str_1 = "string for counting occurances of each alphabet"
 
-for char in new_string:   #  loop for counting occurances in string
-    if char in count:
-        count[char] += 1  #   increase the count
-    else:
-        count[char] = 1   #   Count will start from 1 if first time character occured
-print(count)
+for x in str_1:
+    c = str_1.count(x)
+    print(f'{x} = {c}')
+
 
 print("--- Next Run ---")
 
 #   Reverse a given string
-reverse_st = new_string[::-1]
+reverse_st = String[::-1]
 print("String Reversed:  ", reverse_st)
 
 print("--- Next Run ---")
 
 #    Split a string on hyphens 
-Split_st = new_string.split("-")
+St = "W3-School.com"
+Split_st = St.split("-")
 print("String splited on hyphens:  ", Split_st)
 
 print("--- Next Run ---")
