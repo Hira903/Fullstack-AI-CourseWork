@@ -27,7 +27,27 @@ print("SquareRoot of price values:  ", np.sqrt(price))
 print("cube of prices:  ", np.power(price,3))
 print("Absolute price value:   ", np.abs(price))
 
-# --- 1D array operations ----->
+# --- Trigonometric functions
+''' As our data values are large so performing trigonometric functions on large
+values may result in infinite result, so to handle such situation we divide each value by pi.
+Adding 1 makes sure that no value is zero in the data'''
+pricePie = (price/np.pi) +1
+print("Sine values of array:", np.sin(pricePie))
+print("Cosine values of array:", np.cos(pricePie))
+print("Tangent values of array:", np.tan(pricePie))
+    # --- Hyperbolic trogonometric functions
+print("Sinh values of array:", np.sinh(pricePie))
+print("Cosh values of array:", np.cosh(pricePie))
+print("Tanh values of array:", np.tanh(pricePie))
+    # --- Exponential Value
+print("Exponential values of array:", np.exp(pricePie))
+    # --- log Values
+print("Log values of array:", np.log(pricePie))
+print("Log10 values of array:", np.log10(pricePie))
+
+
+
+## --- 1D array operations ----->
 
 # --- printing all values of 1D array
 for items in np.nditer(price):
@@ -51,7 +71,7 @@ print("Datatype of 2D array is: ", price.dtype)
 
 
 
-# --- 2 Dimension array ------->
+## --- 2 Dimension array ------->
 D2_Array = np.array([price, broked_id])
 
 print("Two - Dimentional array of price and broked_id:", D2_Array)
@@ -77,8 +97,8 @@ for index, items in np.ndenumerate(D2_Array):
     print (index, items)
 
 
-# --- reshaping 2D array from 2 * 400 to 3 * 100
-D2_Array_Reshape = np.reshape(D2_Array, (5, 80))
+# --- reshaping 2D array from 2 * 400 to 4 * 100
+D2_Array_Reshape = np.reshape(D2_Array, (4, 100))
 
 # printing elements to reshaped array with indexes
 for items, index in np.ndenumerate(D2_Array_Reshape):
