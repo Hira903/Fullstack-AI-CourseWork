@@ -47,14 +47,22 @@ print(data_numeric.dtypes)
 
 
 # Selecting x and y of dataset
-feature_cols = data_numeric[["Marital status", "Course", "Previous qualification", "Previous qualification (grade)", "Mother's qualification", "Father's qualification", "Mother's occupation", "Father's occupation", "Gender", "Curricular units 1st sem (grade)", "Curricular units 2nd sem (grade)"]]
-x = feature_cols
+x = data_numeric.drop(columns=['target_encoded'])
 y = data_numeric.target_encoded
 
+sns.heatmap(data_numeric.corr())
+plt.title("Heatmap of Correlation Values")
+plt.show()
+
+# Scaling data
+from sklearn.preprocessing import StandardScaler
+scaler = StandardScaler()
+scaler.fit(x)
+X_scaled = scaler.transform(x.values)
 
 # Spliting data 
 from sklearn.model_selection import train_test_split
-x_train, x_test, y_train, y_test = train_test_split(x, y, train_size=0.8, random_state=20)
+x_train, x_test, y_train, y_test = train_test_split(X_scaled, y, train_size=0.85, random_state=20)
 
 # Fitting Model
 from sklearn.linear_model import LogisticRegression
@@ -74,7 +82,7 @@ for name , model in Models.items():
 
     print(f" ------ {name} --------")
     print("Confusion Metrics:", metrics.confusion_matrix(y_test, y_pred))
-    print("Acuuracy Score:", metrics.accuracy_score(y_test, y_pred))
+    print("Accuracy Score:", metrics.accuracy_score(y_test, y_pred))
     print("Classification Report:", metrics.classification_report(y_test,y_pred))
 
     cm = metrics.confusion_matrix(y_test,y_pred)
