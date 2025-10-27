@@ -21,7 +21,7 @@ print("Statistical analysis \n", data.describe())
 print("Unique values in target column\n", data["Target"].unique())
 
 # Converting Target column into integer
-import sklearn.preprocessing
+
 from sklearn.preprocessing import LabelEncoder
 
 le = LabelEncoder()
