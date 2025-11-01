@@ -6,7 +6,7 @@ import seaborn as sns
 
 # %%
 # loading dataset from CSV file using pandas
-boston = pd.read_csv("D:\GitHub\Fullstack-AI-CourseWork\Practice_DataSets\Machine_Learning\Linear_Regression\Boston_dataset\Boston.csv")
+boston = pd.read_csv("Machine_Learning\Linear_Regression\Boston_dataset\Boston.csv")
 print(boston)
 
 # %%

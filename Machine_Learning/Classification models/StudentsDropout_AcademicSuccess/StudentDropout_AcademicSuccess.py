@@ -5,7 +5,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # Loading data
-data = pd.read_csv("D:\GitHub\Fullstack-AI-CourseWork\Practice_DataSets\Machine_Learning\Classification models\StudentsDropout_AcademicSuccess\data.csv" , delimiter=";", index_col=1)
+data = pd.read_csv("Machine_Learning\Classification models\StudentsDropout_AcademicSuccess\data.csv" , delimiter=";", index_col=1)
 
 # exploring data using pandas functions
 print("DataSet \n", data)

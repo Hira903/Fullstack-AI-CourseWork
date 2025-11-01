@@ -4,7 +4,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # importing csv
-Recipe = pd.read_csv("D:\GitHub\Fullstack-AI-CourseWork\Practice_DataSets\Machine_Learning\Classification models\RecipeReviewsUserFeedbackDataset\RecipeReviewsUserFeedbackDataset.csv")
+Recipe = pd.read_csv("Machine_Learning/Classification models/RecipeReviewsUserFeedbackDataset/RecipeReviewsUserFeedbackDataset.csv")
 print(Recipe)
 print(Recipe.dtypes)
 print(Recipe.describe())
